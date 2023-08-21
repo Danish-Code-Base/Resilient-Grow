@@ -1,0 +1,100 @@
+/* General CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    margin: 0 15rem;
+}
+
+/*header CSS */
+
+header {
+    font-size: 1.6rem;
+}
+
+.top-nav {
+    justify-content: space-between;
+    padding: 1.5rem 15rem;
+}
+
+.dematAc {
+    background-color: #73acf5;
+    color: #ffffff;
+    padding: 1.3rem 2rem;
+    border-radius: 30px;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-links {
+    justify-content: center;
+    padding: 2rem;
+    background-color: #73acf5;
+}
+
+.nav-links>a {
+    color: #ffffff;
+    margin-right: 3rem;
+    /* font-weight:600; */
+}
+
+/* hero section CSS */
+
+.hero-section{
+    margin-top: 5rem;
+}
+
+.left{
+    margin-right: 5rem;
+}
+
+.left h1{
+    font-size: 4.8rem;
+    text-transform: capitalize;
+    color: #424242;
+}
+
+.left p{
+    font-size: 1.6rem;
+    color: #949494;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    line-height: 2.4rem;
+}
+
+.left>a{
+    text-transform: capitalize;
+    background-color: #73acf5;
+    color: #ffffff;
+    padding: 1.3rem 2rem;
+    border-radius: 30px;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.right>img{
+    width: 60rem;
+}
