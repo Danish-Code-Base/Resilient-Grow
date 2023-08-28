@@ -111,6 +111,11 @@ header {
 
 @media (max-width: 1114px) {
 
+    .container {
+        margin: 0 10rem;
+        padding-top: 5rem;
+    }
+
     .hero-section {
         flex-direction: column;
         align-items: center;
