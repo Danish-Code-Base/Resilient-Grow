@@ -21,14 +21,14 @@ a {
     align-items: center;
 }
 
-.container {
-    margin: 0 15rem;
-}
-
 /*header CSS */
 
 header {
     font-size: 1.6rem;
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    width: 100%;
 }
 
 .top-nav {
@@ -45,8 +45,36 @@ header {
     font-weight: bold;
 }
 
+.effect:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+}
+
 .logo {
-    height: 50px;
+    height: 5rem;
+}
+
+.menu,
+.close {
+    margin-left: 3rem;
+    width: 4rem;
+    height: 4rem;
+    justify-content: center;
+    background-color: #73acf5;
+    border-radius: 50%;
+    fill: #ffffff;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.menu>svg,
+.close>svg {
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.di-none {
+    display: none;
 }
 
 .nav-links {
@@ -63,29 +91,47 @@ header {
 
 /* hero section CSS */
 
-.hero-section{
-    margin-top: 5rem;
+.container {
+    margin: 0 15rem;
+    padding: 0 1.2rem;
+    margin-top: 138.4px;
 }
 
-.left{
-    margin-right: 5rem;
+.container>div {
+    padding: 8rem 0;
 }
 
-.left h1{
-    font-size: 4.8rem;
+div.hero-section {
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 56.9rem;
+    padding-top: 0;
+}
+
+.left {
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.left h1 {
+    font-size: 4rem;
     text-transform: capitalize;
     color: #424242;
 }
 
-.left p{
+.left p {
     font-size: 1.6rem;
     color: #949494;
+    padding-right: 6rem;
     margin-top: 3rem;
     margin-bottom: 4rem;
     line-height: 2.4rem;
+    text-align: justify;
 }
 
-.left>a{
+.left>a {
     text-transform: capitalize;
     background-color: #73acf5;
     color: #ffffff;
@@ -95,6 +141,141 @@ header {
     font-weight: bold;
 }
 
-.right>img{
-    width: 60rem;
+.right {
+    width: 50%;
+}
+
+.left,
+.right {
+    padding: 0 1.2rem;
+    min-height: 37rem;
+}
+
+.right>img {
+    width: 55rem;
+}
+
+@media (max-width: 1114px) {
+    .container {
+        margin: 0 7rem;
+        margin-top: 13rem;
+    }
+
+    .right>img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1001px) {
+
+    .menu,
+    .close {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .top-nav {
+        padding: 1.5rem 10rem;
+        box-shadow: 0 10px 6px -6px #777;
+    }
+
+    .menu {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: block;
+        padding-left: 10rem;
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .nav-links>a {
+        display: block;
+        padding: 1rem 0;
+    }
+
+    .left {
+        order: 2;
+        margin-left: 50px;
+    }
+
+    .left,
+    .right {
+        width: 80%;
+    }
+
+    .right>img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-nav {
+        padding: 1.5rem 5rem;
+    }
+
+    .nav-links {
+        padding-left: 5rem;
+    }
+
+    .container {
+        margin: 0 7rem;
+        margin-top: 13rem;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 620px) {
+    .container {
+        margin: 0 5rem;
+        margin-top: 13rem;
+    }
+
+    .left,
+    .right {
+        padding: 0;
+    }
+
+    .dematAc {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    .top-nav {
+        padding: 1.5rem 1rem;
+    }
+
+    .menu,
+    .close {
+        margin-left: 1rem;
+    }
+
+    .container {
+        margin: 0 2rem;
+        margin-top: 13rem;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .top-nav {
+        padding: 1.5rem 0;
+    }
+
+    .nav-links {
+        padding-left: 2rem;
+    }
 }
