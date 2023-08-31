@@ -14,6 +14,7 @@ body {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 .flex {
@@ -21,14 +22,15 @@ a {
     align-items: center;
 }
 
-.container {
-    margin: 0 15rem;
-}
-
 /*header CSS */
 
 header {
     font-size: 1.6rem;
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    width: 100%;
+    box-shadow: 0 10px 6px -6px #777;
 }
 
 .top-nav {
@@ -45,8 +47,36 @@ header {
     font-weight: bold;
 }
 
+.effect:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+}
+
 .logo {
-    height: 50px;
+    height: 5rem;
+}
+
+.menu,
+.close {
+    margin-left: 3rem;
+    width: 4rem;
+    height: 4rem;
+    justify-content: center;
+    background-color: #73acf5;
+    border-radius: 50%;
+    fill: #ffffff;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.menu>svg,
+.close>svg {
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.di-none {
+    display: none;
 }
 
 .nav-links {
@@ -63,29 +93,49 @@ header {
 
 /* hero section CSS */
 
-.hero-section{
-    margin-top: 5rem;
+.space,
+.oh-space {
+    padding: 8rem 1.2rem;
+    max-width: 114rem;
+    margin: auto;
 }
 
-.left{
-    margin-right: 5rem;
+.space {
+    padding-top: 4rem;
 }
 
-.left h1{
-    font-size: 4.8rem;
+div.hero-section {
+    margin-top: 138.4px;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 56.9rem;
+}
+
+.left {
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.left h1,
+.head>h2 {
+    font-size: 4rem;
     text-transform: capitalize;
     color: #424242;
 }
 
-.left p{
+.left p {
     font-size: 1.6rem;
     color: #949494;
+    padding-right: 6rem;
     margin-top: 3rem;
     margin-bottom: 4rem;
     line-height: 2.4rem;
+    text-align: justify;
 }
 
-.left>a{
+.left>a {
     text-transform: capitalize;
     background-color: #73acf5;
     color: #ffffff;
@@ -95,6 +145,246 @@ header {
     font-weight: bold;
 }
 
-.right>img{
-    width: 60rem;
+.right {
+    width: 50%;
+}
+
+.left,
+.right {
+    padding: 0 1.2rem;
+    min-height: 37rem;
+}
+
+.right>img {
+    width: 55rem;
+}
+
+/* Why choose us Section CSS */
+
+.why-us {
+    background-color: #73acf5;
+    color: #ffffff;
+}
+
+.head {
+    padding-bottom: 0;
+}
+
+.card {
+    margin-top: 6.4rem;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 300px));
+    justify-content: center;
+}
+
+.head>h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.head>p {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 2.4rem;
+    margin: 1.6rem auto;
+    max-width: 55rem;
+}
+
+.card-item {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #ffffff;
+    color: #424242;
+    padding: 2rem;
+    flex-direction: column;
+    margin: 0 1.2rem;
+    margin-bottom: 4.8rem;
+    border-radius: 1.2rem;
+}
+
+.card-icon {
+    width: 10rem;
+    height: 10rem;
+    background-color: #73acf5;
+    border-radius: 87% 38% 100% 40% / 100% 20% 79% 77% ;
+    margin-top: 1.6rem;
+    justify-content: center;
+}
+
+.card-detail {
+    text-align: center;
+}
+
+.card-detail h3 {
+    font-size: 2rem;
+    line-height: 32px;
+    margin: 2.4rem 0;
+}
+
+.card-detail p {
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    margin-bottom: 3rem;
+    color: #949494;
+}
+
+.card-detail a {
+    font-size: 1.4rem;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    background-color: #73acf5;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 1.6rem;
+}
+
+
+@media (max-width: 1114px) {
+    .space {
+        margin: 0 7rem;
+        margin-top: 13rem;
+    }
+
+    .right>img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1001px) {
+
+    .menu,
+    .close {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .top-nav {
+        padding: 1.5rem 7rem;
+        box-shadow: 0 10px 6px -6px #777;
+    }
+
+    .menu {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: block;
+        padding-left: 8rem;
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .nav-links>a {
+        display: block;
+        padding: 1rem 0;
+    }
+
+    .left {
+        order: 2;
+        margin-left: 50px;
+    }
+
+    .left,
+    .right {
+        width: 80%;
+    }
+
+    .right>img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-nav {
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-links {
+        padding-left: 5rem;
+    }
+
+    .space {
+        margin: 0 7rem;
+        margin-top: 13rem;
+        padding-top: 2rem;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .head>h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .space {
+        margin: 0 3rem;
+        margin-top: 13rem;
+        padding-top: 1rem;
+    }
+
+    .left,
+    .right {
+        padding: 0;
+        min-height: 100%;
+    }
+
+    .right {
+        margin-bottom: 5rem;
+    }
+
+    .left p {
+        padding-right: 2rem;
+    }
+
+    .dematAc {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+    .logo {
+        height: 4rem;
+    }
+
+    .top-nav {
+        padding: 1.5rem 2rem;
+    }
+
+    .menu,
+    .close {
+        margin-left: 1rem;
+    }
+
+    .space {
+        margin: 0;
+        margin-top: 13rem;
+        padding-top: 0;
+    }
+
+    .left p {
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .nav-links {
+        padding-left: 2rem;
+    }
+
+    .left p {
+        padding-right: 0rem;
+    }
 }
