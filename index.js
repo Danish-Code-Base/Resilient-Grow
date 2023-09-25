@@ -37,38 +37,60 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) { slideIndex = 1 }
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 2500); // Change image every 2 seconds
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 
-for (let i = 0; i < 3; i++) {
 
-  document.querySelectorAll(".menu")[i].addEventListener("click", function () {
 
-    // for displaying nav-links
-    for (let i = 0; i < 3; i++) {
-      document.querySelectorAll(".nav-bottom")[i].classList.toggle("d-none");
+// for (let i = 0; i < 3; i++) {
 
-      // for showing close button
+//   document.querySelectorAll(".menu")[i].addEventListener("click", function () {
 
-      document.querySelectorAll(".menu")[i].classList.toggle("d-none");
+//     // for displaying nav-links
+//     for (let i = 0; i < 3; i++) {
+//       document.querySelectorAll(".nav-bottom")[i].classList.toggle("d-none");
 
-      document.querySelectorAll(".close")[i].classList.toggle("d-none");
-    }
-  });
-}
+//       // for showing close button
 
-for (let i = 0; i < 3; i++) {
-  document.querySelectorAll(".close")[i].addEventListener("click", function () {
-    for (let i = 0; i < 3; i++) {
-      // for closing nav-links
+//       document.querySelectorAll(".menu")[i].classList.toggle("d-none");
 
-      document.querySelectorAll(".nav-bottom")[i].classList.toggle("d-none");
+//       document.querySelectorAll(".close")[i].classList.toggle("d-none");
+//     }
+//   });
+// }
 
-      // for showing menu button
+// for (let i = 0; i < 3; i++) {
+//   document.querySelectorAll(".close")[i].addEventListener("click", function () {
+//     for (let i = 0; i < 3; i++) {
+//       // for closing nav-links
 
-      document.querySelectorAll(".menu")[i].classList.toggle("d-none");
+//       document.querySelectorAll(".nav-bottom")[i].classList.toggle("d-none");
 
-      document.querySelectorAll(".close")[i].classList.toggle("d-none");
-    }
-  });
-}
+//       // for showing menu button
+
+//       document.querySelectorAll(".menu")[i].classList.toggle("d-none");
+
+//       document.querySelectorAll(".close")[i].classList.toggle("d-none");
+//     }
+//   });
+// }
+
+document.querySelector(".menu").addEventListener("click", function () {
+  document.querySelector(".nav-bottom").classList.toggle("d-none");
+
+  // for showing close button
+
+  document.querySelector(".menu").classList.toggle("d-none");
+
+  document.querySelector(".close").classList.toggle("d-none");
+});
+
+document.querySelector(".close").addEventListener("click", function () {
+  document.querySelector(".nav-bottom").classList.toggle("d-none");
+
+  // for showing close button
+
+  document.querySelector(".menu").classList.toggle("d-none");
+
+  document.querySelector(".close").classList.toggle("d-none");
+});
